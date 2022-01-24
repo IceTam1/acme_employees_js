@@ -65,7 +65,7 @@ function findManagementChainForEmployee (employee, arr) {
  let managerChain = [];
  let idManager = employee.managerId;
 
-for(let i = employee.managerId; i > 0; i--) {
+for(let i = idManager; i > 0; i--) {
   for(let i = 0; i < arr.length; i ++){
   if(idManager === arr[i].id){
       managerChain.push(arr[i])
