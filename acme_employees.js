@@ -61,7 +61,26 @@ console.log(
 
 spacer("");
 
-spacer("findManagementChain for moe");
+function findManagementChainForEmployee (employee, arr) {
+ let managerChain = [];
+ 
+ for(let i = 0; i < arr.length; i++) {
+   if(employee.managerId === arr[i].id){
+     managerChain.push(arr[i]);
+   }
+  } 
+  
+ while () {
+
+ } 
+
+
+}
+
+};
+
+  
+
 //given an employee and a list of employees, return a the management chain for that employee. The management chain starts from the employee with no manager with the passed in employees manager
 console.log(
   findManagementChainForEmployee(
