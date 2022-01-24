@@ -63,23 +63,21 @@ spacer("");
 
 function findManagementChainForEmployee (employee, arr) {
  let managerChain = [];
- 
- for(let i = 0; i < arr.length; i++) {
-   if(employee.managerId === arr[i].id){
-     managerChain.push(arr[i]);
-   }
-  } 
-  
- while () {
+ let idManager = employee.managerId;
 
- } 
+for(let i = employee.managerId; i > 0; i--) {
+  for(let i = 0; i < arr.length; i ++){
+  if(idManager === arr[i].id){
+      managerChain.push(arr[i])
+      idManager = arr[i].managerId
 
-
-}
-
+    }
+  }  
+ }
+ return managerChain.reverse();
 };
 
-  
+
 
 //given an employee and a list of employees, return a the management chain for that employee. The management chain starts from the employee with no manager with the passed in employees manager
 console.log(
